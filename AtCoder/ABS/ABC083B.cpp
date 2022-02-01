@@ -5,6 +5,7 @@
 
 using namespace std;
 
+//stringで受け取った関数の各桁の和を出す関数
 int digitSum(string s){
     int sum=0;
     for(int i=0; i<s.length(); i++){
