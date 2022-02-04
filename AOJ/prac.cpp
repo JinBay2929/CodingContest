@@ -5,25 +5,31 @@
 #include<algorithm>
 
 #include<cmath>
+#include<map>
 
 
 
 using namespace std;   
 
 int main(){
-    long long a, b, c;
-    long long ad, bd, cd;
-    long long x, bunbo, ans;
-    cin>>a>>b>>c;
+    string sa, sb, sc, next=sa;
+    cin>>sa>>sb>>sc;
 
-    bunbo=1000000007;
-    ad=a%bunbo;
-    bd=b%bunbo;
-    cd=c%bunbo;
+    int numa=sa.length();
+    int numb=sb.length();
+    int numc=sc.length();
 
-    ans=(((ad*bd)%bunbo)*cd)%bunbo;
-    
-
+    // while(numa>0 && numb>0 && numc>0){
+    //     if(next[0]=='a'){
+    //         sa.erase(sa.begin());
+    //         numa--;
+    //         next=sa;
+    //     }else if(next[0]=='b'){
+    //         sb.erase(sb.begin());
+    //         numb--;
+    //         next=sb;
+    //     }
+    // }
 
     cout<<ans<<endl;
     
