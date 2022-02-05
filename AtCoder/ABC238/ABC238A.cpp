@@ -11,19 +11,24 @@
 
 using namespace std;   
 
-int main(){
-    int w, a, b, ans;
-    cin>>w>>a>>b;
 
-    if((a<=b&&b<=a+w) || (a<=b+w && b+w<=a+w)){
-        ans=0;
-    }else if(b>a+w){
-        ans=b-(a+w);
+
+int main(){
+    int n;
+    string ans;
+
+    cin>>n;
+
+    if(n>2*log2(n)){
+        ans="Yes";
     }else{
-        ans=a-(b+w);
+        ans="No";
     }
 
+    
+    
     cout<<ans<<endl;
+
 
     
     return 0;

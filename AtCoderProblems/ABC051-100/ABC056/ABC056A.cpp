@@ -12,16 +12,19 @@
 using namespace std;   
 
 int main(){
-    int w, a, b, ans;
-    cin>>w>>a>>b;
+    char a, b, ans;
+    cin>>a>>b;
 
-    if((a<=b&&b<=a+w) || (a<=b+w && b+w<=a+w)){
-        ans=0;
-    }else if(b>a+w){
-        ans=b-(a+w);
+    if(a=='H'){
+        ans=b;
     }else{
-        ans=a-(b+w);
+        if(b=='H'){
+            ans='D';
+        }else{
+            ans='H';
+        }
     }
+
 
     cout<<ans<<endl;
 

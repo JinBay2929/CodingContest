@@ -12,18 +12,17 @@
 using namespace std;   
 
 int main(){
-    int w, a, b, ans;
-    cin>>w>>a>>b;
+    int n, x, y, time, ans;
+    cin>>n;
 
-    if((a<=b&&b<=a+w) || (a<=b+w && b+w<=a+w)){
-        ans=0;
-    }else if(b>a+w){
-        ans=b-(a+w);
-    }else{
-        ans=a-(b+w);
-    }
+    x=800*n;
+    time=n/15;
+    y=200*time;
+
+    ans=x-y;
 
     cout<<ans<<endl;
+    
 
     
     return 0;
