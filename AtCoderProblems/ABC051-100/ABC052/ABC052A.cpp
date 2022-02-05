@@ -14,13 +14,15 @@ using namespace std;
 
 
 int main(){
-    int n, m;
-    string ans;
+    int a, b, c, d, ans;
+    cin>>a>>b>>c>>d;
 
-    cin>>n>>m;
+    if(a*b>=c*d){
+        ans=a*b;
+    }else{
+        ans=c*d;
+    }
 
-    
-    
     cout<<ans<<endl;
 
 

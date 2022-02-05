@@ -14,16 +14,15 @@ using namespace std;
 
 
 int main(){
-    int n, m;
-    string ans;
+    char c;
+    cin>>c;
 
-    cin>>n>>m;
-
+    if(c=='a'||c=='i'||c=='u'||c=='e'||c=='o'){
+        cout<<"vowel"<<endl;
+    }else{
+        cout<<"consonant"<<endl;
+    }
     
-    
-    cout<<ans<<endl;
-
-
     
     return 0;
 }

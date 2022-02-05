@@ -14,16 +14,10 @@ using namespace std;
 
 
 int main(){
-    int n, m;
-    string ans;
+    string a, b, c;
+    cin>>a>>b>>c;
 
-    cin>>n>>m;
-
-    
-    
-    cout<<ans<<endl;
-
-
+    cout<<a[0]<<b[0]<<c[0]<<endl;
     
     return 0;
 }

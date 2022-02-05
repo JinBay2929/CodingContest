@@ -14,16 +14,18 @@ using namespace std;
 
 
 int main(){
-    int n, m;
-    string ans;
+    int a, b, ans;
+    char op;
+    cin>>a>>op>>b;
 
-    cin>>n>>m;
+    if(op=='+'){
+        ans=a+b;
+    }else{
+        ans=a-b;
+    }
 
-    
-    
     cout<<ans<<endl;
-
-
+    
     
     return 0;
 }

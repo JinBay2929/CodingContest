@@ -14,14 +14,10 @@ using namespace std;
 
 
 int main(){
-    int n, m;
-    string ans;
+    string s;
+    cin>>s;
 
-    cin>>n>>m;
-
-    
-    
-    cout<<ans<<endl;
+    cout<<s.substr(0, 5)<<" "<<s.substr(6, 7)<<" "<<s.substr(14, 5);
 
 
     

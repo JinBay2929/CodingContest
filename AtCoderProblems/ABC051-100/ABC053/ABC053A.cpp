@@ -14,13 +14,16 @@ using namespace std;
 
 
 int main(){
-    int n, m;
+    int x;
     string ans;
 
-    cin>>n>>m;
+    cin>>x;
 
-    
-    
+    if(x<1200){
+        ans="ABC";
+    }else{
+        ans="ARC";
+    }
     cout<<ans<<endl;
 
 
