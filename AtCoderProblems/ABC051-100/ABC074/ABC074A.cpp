@@ -11,14 +11,11 @@
 
 using namespace std;   
 
-
 int main(){
-    int n, k, ans=1;
-    cin>>n>>k;
+    int n, a, ans;
+    cin>>n>>a;
 
-    for(int i=0; i<n; i++){
-        ans=min(ans*2, ans+k);
-    }
+    ans=pow(n, 2)-a;
     cout<<ans<<endl;
     
     return 0;

@@ -11,15 +11,22 @@
 
 using namespace std;   
 
-
 int main(){
-    int n, k, ans=1;
+    int n, k, l, ans=0;
+    vector<int> ls;
     cin>>n>>k;
 
     for(int i=0; i<n; i++){
-        ans=min(ans*2, ans+k);
+        cin>>l;
+        ls.push_back(l);
     }
-    cout<<ans<<endl;
+
+    sort(ls.begin(), ls.end(), greater<>());
+
+    for(int i=0; i<k; i++){
+        ans+=ls[i];
+    }
     
+    cout<<ans<<endl;
     return 0;
 }

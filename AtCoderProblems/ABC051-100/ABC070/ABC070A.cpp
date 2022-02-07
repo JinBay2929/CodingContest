@@ -11,15 +11,14 @@
 
 using namespace std;   
 
-
 int main(){
-    int n, k, ans=1;
-    cin>>n>>k;
+    string n, ans="No";
+    cin>>n;
 
-    for(int i=0; i<n; i++){
-        ans=min(ans*2, ans+k);
+    if(n[0]==n[2]){
+        ans="Yes";
     }
+
     cout<<ans<<endl;
-    
     return 0;
 }

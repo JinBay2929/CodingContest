@@ -11,15 +11,10 @@
 
 using namespace std;   
 
-
 int main(){
-    int n, k, ans=1;
-    cin>>n>>k;
+    int n;
+    cin>>n;
 
-    for(int i=0; i<n; i++){
-        ans=min(ans*2, ans+k);
-    }
-    cout<<ans<<endl;
-    
+    cout<<"ABC"<<n<<endl;
     return 0;
 }

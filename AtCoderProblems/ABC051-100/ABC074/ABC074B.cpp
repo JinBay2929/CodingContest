@@ -11,15 +11,16 @@
 
 using namespace std;   
 
-
 int main(){
-    int n, k, ans=1;
+    int n, k, x, sum=0;
     cin>>n>>k;
 
     for(int i=0; i<n; i++){
-        ans=min(ans*2, ans+k);
+        cin>>x;
+        sum+=min((k-x)*2, x*2);
     }
-    cout<<ans<<endl;
+
+    cout<<sum<<endl;
     
     return 0;
 }

@@ -11,15 +11,18 @@
 
 using namespace std;   
 
-
 int main(){
-    int n, k, ans=1;
-    cin>>n>>k;
+    int x, a, b;
+    char ans;
+    cin>>x>>a>>b;
 
-    for(int i=0; i<n; i++){
-        ans=min(ans*2, ans+k);
+    if(abs(x-a)<=abs(x-b)){
+        ans='A';
+    }else{
+        ans='B';
     }
-    cout<<ans<<endl;
+
     
+    cout<<ans<<endl;
     return 0;
 }

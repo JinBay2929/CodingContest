@@ -11,15 +11,17 @@
 
 using namespace std;   
 
-
 int main(){
-    int n, k, ans=1;
-    cin>>n>>k;
+    int n, ans;
+    cin>>n;
 
-    for(int i=0; i<n; i++){
-        ans=min(ans*2, ans+k);
+    for(int i=0; i<8; i++){
+        if(pow(2, i)<=n && n<pow(2, i+1)){
+            ans=pow(2, i);
+        }
     }
+
     cout<<ans<<endl;
-    
+
     return 0;
 }

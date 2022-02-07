@@ -11,15 +11,22 @@
 
 using namespace std;   
 
+char cadd(char c){
+    int ic=int(c-'0');
+    ic++;
+    char cic=ic+'0';
+    return cic;
+}
 
 int main(){
-    int n, k, ans=1;
-    cin>>n>>k;
+    int r, g, ans;
+    cin>>r>>g;
+    
+    ans=2*g-r;
 
-    for(int i=0; i<n; i++){
-        ans=min(ans*2, ans+k);
-    }
     cout<<ans<<endl;
+
+   
     
     return 0;
 }
