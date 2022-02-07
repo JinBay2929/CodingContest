@@ -12,25 +12,20 @@
 using namespace std;   
 
 int main(){
-    int n, a, ans;
-    vector<int> as;
-
+    int n, a, min=100000, max=0, ans;
 
     cin>>n;
     for(int i=0; i<n; i++){
         cin>>a;
-        as.push_back(a-1);
+        if(min>a){
+            min=a;
+        }
+        if(max<a){
+            max=a;
+        }
     }
 
-    if(find(as.begin(), as.end(), 1)==as.end()){
-        ans=-1;
-    }else{
-        
-    }
-
-    
-
-    
+    ans=max-min;
     
     cout<<ans<<endl;
     

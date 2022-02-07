@@ -12,23 +12,20 @@
 using namespace std;   
 
 int main(){
-    int n, a, ans;
-    vector<int> as;
+    int x, a, b;
+    string ans;
 
+    cin>>x>>a>>b;
 
-    cin>>n;
-    for(int i=0; i<n; i++){
-        cin>>a;
-        as.push_back(a-1);
-    }
-
-    if(find(as.begin(), as.end(), 1)==as.end()){
-        ans=-1;
+    if(a>=b){
+        ans="delicious";
     }else{
-        
+        if(b-a<=x){
+            ans="safe";
+        }else{
+            ans="dangerous";
+        }
     }
-
-    
 
     
     
