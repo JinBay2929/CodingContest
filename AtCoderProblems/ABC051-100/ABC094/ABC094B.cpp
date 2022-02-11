@@ -13,6 +13,7 @@ using namespace std;
 
 
 int main(){
+    //初期地点の左右で関所が何個あるかをカウントすればいい
     int n, m, x, a, lef=0, rig=0, ans;
     cin>>n>>m>>x;
 
