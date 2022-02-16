@@ -13,16 +13,16 @@ using namespace std;
 
 
 int main(){
-    int a, b, ans, sum=0;
-    cin>>a>>b;
+    int n;
+    cin>>n;
 
-    for(int i=1; i<=b-a-1; i++){
-        sum+=i;
+    if(n<=999){
+        cout<<"ABC"<<endl;
+        
+    }else{
+        cout<<"ABD"<<endl;
+        
     }
-
-    ans=sum-a;
-
-    cout<<ans<<endl;
     
    
     return 0;
