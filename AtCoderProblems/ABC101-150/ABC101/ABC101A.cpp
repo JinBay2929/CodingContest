@@ -13,18 +13,19 @@ using namespace std;
 
 
 int main(){
-    string n, ans="No";
-    int sum=0;
+    string s;
+    int ans=0;
 
-    cin>>n;
+    cin>>s;
 
-    for(int i=0; i<n.length(); i++){
-        sum+=((int)(n[i]-'0'));
+    for(int i=0; i<4; i++){
+        if(s[i]=='+'){
+            ans++;
+        }else{
+            ans--;
+        }
     }
 
-    if(stoi(n)%sum==0){
-        ans="Yes";
-    }
     cout<<ans<<endl;
     
    
