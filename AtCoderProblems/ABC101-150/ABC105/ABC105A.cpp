@@ -12,15 +12,13 @@ using namespace std;
 
 
 int main(){
-    int n;
-    string ans="No";
-    cin>>n;
+    int n, k, ans;
+    cin>>n>>k;
 
-    for(int i=0; i<=n/7; i++){
-        if((n-7*i)%4==0){
-            ans="Yes";
-            break;
-        }
+    if(n%k==0){
+        ans=0;
+    }else{
+        ans=1;
     }
     
     cout<<ans<<endl;
