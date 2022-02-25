@@ -12,16 +12,18 @@ using namespace std;
 
 
 int main() {
-  int a, b, c, d;
-  cin >>a>>b>>c>>d;
+  int k, ans;
+  cin >>k;
   
-  int dx=c-a;
-  int dy=d-b;
+  if(k%2==0){
+    ans=(k/2) * (k/2);
+  }else{
+    ans=(k/2) * (k- k/2);
+  }
+  
 
-  cout<<c-dy<<" "<<d+dx<<" "<<a-dy<<" "<<b+dx<<endl;
-  
+  cout<<ans<<endl;
 
-  
   return 0;
 }
     
