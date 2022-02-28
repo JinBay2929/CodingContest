@@ -54,7 +54,10 @@
         "xutility": "cpp",
         "map": "cpp",
         "xtree": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "array": "cpp",
+        "unordered_map": "cpp",
+        "string_view": "cpp"
     },
     
 }
