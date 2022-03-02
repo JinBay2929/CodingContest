@@ -17,13 +17,24 @@ using namespace std;
 
 
 int main(){
-  int n, ans;
-  cin>>n;
+  string s;
+  int n, counter, ans=0;
 
-  if(n%111==0){
-    ans=n;
-  }else{
-    ans=(n/111 + 1)*111;
+  cin>>n>>s;
+
+  for(int i=0; i<1000; i++){
+    int c[3]={i/100, (i/10)%10, i%10};
+
+    int t=0;
+    for(int j=0; j<n; j++){
+      if(s[j]==('0'+c[t])){
+        t++;
+      }
+      if(t==3){
+        ans++;
+        break;
+      }
+    }
   }
 
   cout<<ans<<endl;

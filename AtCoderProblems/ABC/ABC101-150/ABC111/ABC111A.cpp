@@ -17,16 +17,18 @@ using namespace std;
 
 
 int main(){
-  int n, ans;
+  string n;
   cin>>n;
 
-  if(n%111==0){
-    ans=n;
-  }else{
-    ans=(n/111 + 1)*111;
+  for(int i=0; i<3; i++){
+    if(n[i]=='1'){
+      n[i]='9';
+    }else if(n[i]=='9'){
+      n[i]='1';
+    }
   }
 
-  cout<<ans<<endl;
+  cout<<n<<endl;
   
   return 0;
 }

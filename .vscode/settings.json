@@ -57,7 +57,8 @@
         "numeric": "cpp",
         "array": "cpp",
         "unordered_map": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "random": "cpp"
     },
     
 }
