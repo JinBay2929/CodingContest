@@ -6,27 +6,30 @@
 
 #include<cmath>
 #include<map>
-#include <stack>
 #include <sstream>
 #include<ctime>
 #include<queue>
 #include<set>
 #include <cassert>
 #include <numeric>
-#include <functional>
 using namespace std;   
 
 
 int main(){
   vector<int> a;
 
-  a.push_back(3);
-  a.push_back(10);
-  a.push_back(22);
+  for(int i=0; i<3; i++){
+    int j;
+    cin>>j;
+    a.push_back(j);
+  }
 
-  //lower_bound()はイテレータを返すので、起点との差をとる必要あり。
+  sort(a.begin(), a.end(), greater<int>());
 
-  cout<<lower_bound(a.begin(), a.end(), 9)-a.begin()<<endl;
+  for(int i=0; i<3; i++){
+    cout<<a[i]<<endl;
+  }
+
   return 0;
 }
     

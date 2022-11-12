@@ -6,27 +6,35 @@
 
 #include<cmath>
 #include<map>
-#include <stack>
 #include <sstream>
 #include<ctime>
 #include<queue>
 #include<set>
 #include <cassert>
 #include <numeric>
-#include <functional>
 using namespace std;   
 
 
 int main(){
-  vector<int> a;
+  int n, c[100];
 
-  a.push_back(3);
-  a.push_back(10);
-  a.push_back(22);
+  cin>>n;
 
-  //lower_bound()はイテレータを返すので、起点との差をとる必要あり。
+  for(int i=0; i<n; i++){
+    cin>>c[i];
+  }
 
-  cout<<lower_bound(a.begin(), a.end(), 9)-a.begin()<<endl;
+  //バブルソート実装
+  for(int i=0; i<n; i++){
+    for(int j=n-1; j>i; j--){
+      if(c[j-1]>c[j]) swap(c[j-1], c[j]);
+    }
+  }
+
+
+  for (int i = 0; i < n; i++) cout << c[i] << endl;
+
+
   return 0;
 }
     

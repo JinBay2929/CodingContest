@@ -6,27 +6,33 @@
 
 #include<cmath>
 #include<map>
-#include <stack>
 #include <sstream>
 #include<ctime>
 #include<queue>
 #include<set>
 #include <cassert>
 #include <numeric>
-#include <functional>
 using namespace std;   
 
 
 int main(){
-  vector<int> a;
+  int n, c[10000], minx=10000000;
 
-  a.push_back(3);
-  a.push_back(10);
-  a.push_back(22);
+  cin>>n;
 
-  //lower_bound()はイテレータを返すので、起点との差をとる必要あり。
+  for(int i=0; i<n; i++){
+    cin>>c[i];
+  }
 
-  cout<<lower_bound(a.begin(), a.end(), 9)-a.begin()<<endl;
+  for (int i=0; i<n; i++){
+    minx = min(minx, c[i]);
+  }
+
+// パターン２
+//   minx = *min_element(c+0, c+n);
+
+  cout<<minx<<endl;
+
   return 0;
 }
     

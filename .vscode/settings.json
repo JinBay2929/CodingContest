@@ -60,5 +60,6 @@
         "string_view": "cpp",
         "random": "cpp"
     },
+    "code-runner.runInTerminal": true
     
 }
