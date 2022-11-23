@@ -14,28 +14,21 @@
 #include <cassert>
 #include <numeric>
 #include <functional>
-#include <bitset>
 using namespace std;   
 
 
 int main(){
-  int n, x, a[1000];
-  string ans="No";
-
-  cin>>n>>x;
-  for(int i=0; i<n; i++){
-    cin>>a[i];
-  }
-
-  for(int i=0; i<n; i++){
-    if(a[i]==x){
-      ans="Yes";
-      break;
-    }
-  }
-
-  cout<<ans<<endl;
-
+  int n=3;
+  vector<int> a={1,2,3}; 
+  
+  
+  do {
+      for (int i = 0; i < n; i++) {
+          if (i) cout << ",";
+          cout << a[i];
+      }
+      cout << endl;
+  } while(next_permutation(a.begin(), a.end()));
   return 0;
 }
     
