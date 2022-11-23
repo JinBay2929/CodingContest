@@ -19,24 +19,28 @@ using namespace std;
 
 
 int main(){
-  //累積和問題。S(N)=S(N-1)+a(N)を活用。
+  int n, k, a[100], b[100];
+  string ans="No";
 
-  int n, q, a[100008], l[100008], r[100008], sum[100008];
-  cin>>n>>q;
-
-  for(int i=1; i<=n; i++)cin>>a[i];
-  for(int i=1; i<=q; i++)cin>>l[i]>>r[i];
-
-  sum[0]=0;
-  sum[1]=a[1];
-  for(int i=2; i<=n; i++){
-    sum[i]=(sum[i-1]+a[i]);
+  cin>>n>>k;
+  for(int i=0; i<n; i++){
+    cin>>a[i];
+  }
+  for(int i=0; i<n; i++){
+    cin>>b[i];
   }
 
-  for(int i=1; i<=q; i++){
-    cout<<sum[r[i]]-sum[l[i]-1]<<endl;
+  for(int i=0; i<n; i++){
+    for(int j=0; j<n; j++){
+      if(a[i]+b[j]==k){
+        ans="Yes";
+        break;
+      }
+    }
+    
   }
 
+  cout<<ans<<endl;
 
   return 0;
 }
