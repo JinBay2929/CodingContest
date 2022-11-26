@@ -33,7 +33,6 @@ int main(){
   }
   cin>>q;
 
-  //sum配列を0で埋めておく。バグ対策？
   for(int i=1; i<=h; i++){
     for(int j=1; j<=w; j++){
       sum[i][j]=0;
