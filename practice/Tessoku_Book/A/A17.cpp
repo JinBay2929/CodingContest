@@ -33,6 +33,7 @@ int main(){
     ti[i]=min(ti[i-1]+a[i], ti[i-2]+b[i]);
   }
 
+  //復元プロセス
   int i=n;
   while(i>1){
     place.push_back(i);
@@ -47,7 +48,7 @@ int main(){
   reverse(place.begin(), place.end());
 
   cout<<place.size()<<endl;
-  
+
   for(i=0; i<place.size(); i++){
     cout<<place[i];
     if(i<place.size()-1)cout<<" ";
@@ -57,7 +58,6 @@ int main(){
   return 0;
 }
 
-    
     
     
     

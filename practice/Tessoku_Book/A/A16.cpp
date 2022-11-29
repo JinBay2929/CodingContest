@@ -20,7 +20,7 @@ using namespace std;
 
 int n;
 int a[100009], b[100009], ti[100009];
-vector<int> place;
+
 int main(){
   cin>>n;
   
@@ -33,26 +33,8 @@ int main(){
     ti[i]=min(ti[i-1]+a[i], ti[i-2]+b[i]);
   }
 
-  int i=n;
-  while(i>1){
-    place.push_back(i);
-    if(ti[i]-a[i]==ti[i-1]){
-      i-=1;
-    }else{
-      i-=2;
-    }
-  }
-  place.push_back(1);
+  cout<<ti[n]<<endl;
 
-  reverse(place.begin(), place.end());
-
-  cout<<place.size()<<endl;
-  
-  for(i=0; i<place.size(); i++){
-    cout<<place[i];
-    if(i<place.size()-1)cout<<" ";
-  }
-  cout<<endl;
 
   return 0;
 }
