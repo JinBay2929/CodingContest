@@ -52,11 +52,11 @@ int main(){
     long long secsum=s[m+i]-s[i];
 
     for(int i=0; i<m-k; i++){
-      maxsum(a)
+      
     }
   }
 
-  cout<<ans<<endl;
+ 
 
   return 0;
 }
