@@ -18,13 +18,29 @@
 using namespace std;   
 
 
-int a, b;
-long long ans;
+int n, ans=0, a[100009];
+char t[100009];
 
 int main(){
-  cin>>a>>b;
+  cin>>n;
 
-   
+  for(int i=1; i<=n; i++)cin>>t[i]>>a[i];
+
+
+  for(int i=1; i<=n; i++){
+    if(t[i]=='+'){
+      ans+=a[i];
+    }
+    else if(t[i]=='-'){
+      ans-=a[i];
+    }
+    else if(t[i]=='*'){
+      ans*=a[i];
+    }
+    if(ans<0)ans+=10000;
+    ans%=10000;
+    cout<<ans<<endl;
+  }
 
   return 0;
 }
