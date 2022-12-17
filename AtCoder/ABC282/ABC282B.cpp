@@ -18,37 +18,30 @@
 using namespace std;   
 
 
-
-int n, k, p, sim;
-long long ans=0;
-vector<int> a, b;
+int n, m;
+string s[39];
+int ans=0;
 
 int main(){
-  cin>>n>>k>>p;
-  
+  cin>>n>>m;
+
   for(int i=1; i<=n; i++){
-    a.push_back(i);
-    b.push_back(i);
+    cin>>s[i];
   }
 
-  
-
-
-  do{
-    do{
-      sim=0;
-      for(int i=0; i<n-1; i++){
-        if((a[i+1]-a[i])>0  && (b[i+1]-b[i])>0)sim++;
-        else if((a[i+1]-a[i])<0  && (b[i+1]-b[i])<0)sim++;
+  for(int i=1; i<=n-1; i++){
+    for(int j=i+1; j<=n; j++){
+      int poi=0;
+      for(int k=0; k<m; k++){
+        if(s[i][k]=='o' || s[j][k]=='o')poi++;
       }
 
-      if(sim==k){
+      if(poi==m){
         ans++;
       }
+    }
+  }
 
-    }while(next_permutation(b.begin(), b.end()));
-
-  }while(next_permutation(a.begin(), a.end()));
 
 
   cout<<ans<<endl;

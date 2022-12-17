@@ -17,7 +17,7 @@
 #include <bitset>
 using namespace std;   
 
-
+//理論上動くがnext_permutationを二重に回してるので絶対TLEする。
 
 int n, k, p, sim;
 long long ans=0;
