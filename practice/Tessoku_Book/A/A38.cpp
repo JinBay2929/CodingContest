@@ -18,36 +18,36 @@
 using namespace std;   
 
 
-int n, ans=0;
-int a[200009];
+int d, n, ans=0;
+int l[10009], r[10009], h[10009], hours[10009];
 
 int main(){
-  cin>>n;
+  cin>>d>>n;
 
-  for(int i=1; i<=n; i++)cin>>a[i];
-
-  sort(a+1, a+n+1);
-
-  for(int i=1; i<=100; i++){
-    int counter=0;
-    int j=1;
-    while(a[j]<=i){
-      if(a[j]==i && j<=n){
-        counter++;
-      }
-      j++;
-    }
-    if(counter>=3)ans++;
+  for(int i=1; i<=n; i++){
+    cin>>l[i]>>r[i]>>h[i];
   }
 
-  cout<<ans<<endl;
+  for(int i=1; i<=d; i++){
+    hours[i]=24;
+  }
+
+  for(int i=1; i<=n; i++){
+    for(int j=l[i]; j<=r[i]; j++){
+      if(hours[j]>=h[i]){
+        hours[j]=h[i];
+      }
+    }
+  }
+
+
+  for(int i=1; i<=d; i++){
+    ans+=hours[i];
+  }
 
   
 
-
   cout<<ans<<endl;
-
-  
   
 
   return 0;
