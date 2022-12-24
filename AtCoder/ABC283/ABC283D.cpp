@@ -34,22 +34,37 @@ bool goodStr(string s){
 
 
 
-int h, w, a[1009][1009], ans;
-int hsum[1009];
+string s, ans="No";
+int box[29];
 
 int main(){
-  cin>>h>>w;
+  cin>>s;
 
-  for(int i=1; i<=h; i++){
-    for(int j=1; j<=w; j++){
-      cin>>a[i][j];
+  int sl=s.size();
 
-      hsum[i]+=a[i][j];
-    }
+  for(int i=0; i<6; i++){
+    box[i]=0;
   }
 
-  for(int i=1; i<=h; i++){
-      hsum[i]
+  for(int i=0; i<sl; i++){
+    if('a'<=s[i] && s[i]<='z'){
+      box[s[i]-'a']++;
+
+      if(box[s[i]-'a']>1){
+        ans="No";
+        break;
+      }
+    }
+
+    //末尾の)が出る⇒それまでに良い文字列として削除された内容を
+    //もう一度削除することになる＝＝全部カウントを0にして問題ない？
+    if(s[i]==')'){
+      for(int i=0; i<26; i++){
+        box[i]=0;
+      }
+    }
+
+    if(i==(sl-1))ans="Yes";
   }
 
   
