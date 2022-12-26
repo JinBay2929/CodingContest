@@ -31,11 +31,11 @@ int main(){
   for(int i=1; i<=n; i++)dp[0][i]=a[i];
 
   //dp[1][i]=dp[0][dp[0][i]]など
-  for (int d = 1; d <= 29; d++) {
-		for (int i=1; i<=n; i++) {
+  for (int d = 1; d <= 29; d++){
+    for (int i=1; i<=n; i++) {
       dp[d][i] = dp[d - 1][dp[d - 1][i]];
     }
-	}
+  }
 
   for(int i=1; i<=q; i++){
     //現在地を管理する変数cp
