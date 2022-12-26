@@ -43,6 +43,8 @@ int main(){
       cin>>x;
       auto itr = s.lower_bound(x);
 
+      //イテレータが末尾まで行くとエラーがでる可能性あり。
+      //場合分けして-1を出力させる。
       if(itr==s.end())cout<<-1<<endl;
       else{
         cout<<(*itr)<<endl;

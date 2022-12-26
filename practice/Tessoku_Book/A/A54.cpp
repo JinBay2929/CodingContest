@@ -19,7 +19,7 @@ using namespace std;
 
 
 int q;
-set<int> s;
+map<string, int> m;
 
 int main(){
   cin>>q;
@@ -29,24 +29,15 @@ int main(){
     cin>>type;
 
     if(type==1){
-      int x;
-      cin>>x;
-
-      s.insert(x);
+      string x;
+      int y;
+      cin>>x>>y;
+      m[x]=y;
     }
     else if(type==2){
-      int x;
+      string x;
       cin>>x;
-      s.erase(x);
-    }else if(type==3){
-      int x;
-      cin>>x;
-      auto itr = s.lower_bound(x);
-
-      if(itr==s.end())cout<<-1<<endl;
-      else{
-        cout<<(*itr)<<endl;
-      }
+      cout<<m[x]<<endl;
     }
   }
 
