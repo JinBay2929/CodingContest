@@ -36,6 +36,7 @@ int main(){
         s.pop();
       }
       else{
+        //無いと無限に上のif文を繰り返す
         break;
       }
     }
