@@ -63,7 +63,8 @@ int main(){
   }
 
   for(int i=1; i<=n; i++){
-    cout<<cur[i]<<endl;
+    if (cur[i] == 2000000000) cout << "-1" << endl;
+    else cout<<cur[i]<<endl;
   }
 
   
