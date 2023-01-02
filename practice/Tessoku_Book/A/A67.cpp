@@ -86,6 +86,7 @@ int main(){
 
   for(int i=0; i<edge.size(); i++){
     int idx = edge[i].second;
+    //二頂点が同じグループでないならば、接続して長さを追加する。
     if(UF.same(a[idx], b[idx])==false){
       UF.unite(a[idx], b[idx]);
       ans+=c[idx];

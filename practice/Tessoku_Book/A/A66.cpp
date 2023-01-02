@@ -65,34 +65,30 @@ class UnionFind{
 };
 
 
-int n, m, ans=0;
-int a[100009],b[100009],c[100009];
-
+int n, q;
+int query[100009], u[100009], v[100009];
 
 int main(){
-  cin>>n>>m;
-  for(int i=1; i<=m; i++)cin>>a[i]>>b[i]>>c[i];
-
-  vector<pair<int, int>> edge;
-
-  for(int i=1; i<=m; i++){
-    edge.push_back(make_pair(c[i], i));
-  }
-  sort(edge.begin(), edge.end());
+  cin>>n>>q;
+  for(int i=1; i<=q; i++)cin>>query[i]>>u[i]>>v[i];
 
   UnionFind UF;
   UF.init(n);
 
 
-  for(int i=0; i<edge.size(); i++){
-    int idx = edge[i].second;
-    if(UF.same(a[idx], b[idx])==false){
-      UF.unite(a[idx], b[idx]);
-      ans+=c[idx];
+  for(int i=1; i<=q; i++){
+    if(query[i]==1){
+      UF.unite(u[i], v[i]);
+    }
+    else if(query[i]==2){
+      bool ans=UF.same(u[i], v[i]);
+      if(ans){
+        cout<<"Yes"<<endl;
+      }else{
+        cout<<"No"<<endl;
+      }
     }
   }
-
-  cout<<ans<<endl;
   
   
 
