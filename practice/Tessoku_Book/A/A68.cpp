@@ -62,7 +62,7 @@ public:
 			if (used[G[pos][i].to] == true) continue;
 
 			// 目的地までのパスを探す
-      //行き止まりはreturn0で停止する
+            //行き止まりはreturn0で停止する
 			int flow = dfs(G[pos][i].to, goal, min(F, G[pos][i].cap));
 
 			// フローを流せる場合、残余グラフの容量を flow だけ増減させる
