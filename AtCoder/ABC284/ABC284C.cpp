@@ -17,8 +17,6 @@
 #include <bitset>
 using namespace std;   
 
-
-//8/20ACから抜け出せず終了。何故なのか。。。
 class UnionFind{
   public:
 
@@ -68,8 +66,8 @@ class UnionFind{
 
 
 int n, m;
-int u[100009], v[100009];
-vector<int> gr;
+int u[10009], v[10009];
+int ans=0;
 
 int main(){
   cin>>n>>m;
@@ -85,22 +83,11 @@ int main(){
   }
 
   for(int i=1; i<=n; i++){
-    gr.push_back(UF.root(i));
+    if(UF.root(i)==i)ans++;
   }
 
-  // for(int i=0; i<n; i++){
-  //   cout<<gr[i]<<endl;
-  // }
-
-
-
-  gr.erase(unique(gr.begin(), gr.end()), gr.end());
-
-  
-
-
-  int s=gr.size();
-  cout<<s<<endl;
+ 
+  cout<<ans<<endl;
   
 
   
