@@ -17,6 +17,8 @@
 #include <bitset>
 using namespace std;   
 
+
+//8/20ACから抜け出せず終了。何故なのか。。。
 class UnionFind{
   public:
 
@@ -66,7 +68,7 @@ class UnionFind{
 
 
 int n, m;
-int u[10009], v[10009];
+int u[100009], v[100009];
 vector<int> gr;
 
 int main(){
