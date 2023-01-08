@@ -33,6 +33,8 @@ int main(){
     vb.push_back(b[i]);
   }
 
+  //昇順ソート、降順ソートでi番目とn-i+1番目を掛けて中和する～
+  //という発想に基づく。
   sort(va.begin(), va.end());
   sort(vb.begin(), vb.end(), greater<int>());
 
