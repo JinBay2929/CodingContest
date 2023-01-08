@@ -17,29 +17,43 @@
 #include <bitset>
 using namespace std;   
 
+struct prof{
+  int to, di, tree;
+};
+
+int n, m;
+int a[100009], b[100009], c[100009], d[100009];
+vector<prof> g[10009];
+int dist[10009], treesum[10009];
+int ans;
 
 
-int n,a[69], b[69];
-vector<int> va, vb;
 
 int main(){
+  cin>>n>>m;
 
-  cin>>n;
-  for(int i=1; i<=n; i++)cin>>a[i];
-  for(int i=1; i<=n; i++)cin>>b[i];
-
-  for(int i=1; i<=n; i++){
-    va.push_back(a[i]);
-    vb.push_back(b[i]);
+  for(int i=1; i<=m; i++){
+    cin>>a[i]>>b[i]>>c[i]>>d[i];
   }
 
-  sort(va.begin(), va.end());
-  sort(vb.begin(), vb.end(), greater<int>());
-
-  int ans=0;
-  for(int i=0; i<n; i++){
-    ans+=(va[i]*vb[i]);
+  for(int i=1; i<=m; i++){
+    g[a[i]].push_back({b[i], c[i], d[i]});
   }
+
+  queue<prof> q;
+  q.push({1,0,0});
+
+  while(!q.empty()){
+    int pos=q.front().to;
+    q.pop();
+
+    for(int i=0; i<g[pos].size(); i++){
+      int nex=g[pos][i].to;
+      dist[nex]=min(dist[nex], dist[pos]+g[pos][i].di);
+      treesum[nex]=
+    }
+  }
+  
 
   cout<<ans<<endl;
   
