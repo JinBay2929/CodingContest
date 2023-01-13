@@ -18,17 +18,20 @@
 using namespace std;   
 
 
-int n, q;
-int x[100009], y[100009];
+int h, w;
+int x[1509][1509];
+int q;
 int a[100009],b[100009],c[100009],d[100009];
 
-int point[1509][1509], sum[1509][1509];
+int sum[1509][1509];
 
 int main(){
-  cin>>n;
+  cin>>h>>w;
 
-  for(int i=1; i<=n; i++){
-      cin>>x[i]>>y[i];
+  for(int i=1; i<=h; i++){
+    for(int j=1; j<=w; j++){
+      cin>>x[i][j];
+    }
   }
 
   cin>>q;
@@ -36,27 +39,22 @@ int main(){
   for(int i=1; i<=q; i++){
     cin>>a[i]>>b[i]>>c[i]>>d[i];
   }
-
-  for(int i=0; i<=1505; i++){
-    for(int j=0; j<=1505; j++){
-      point[i][j]=0;
+  
+  //0行目、0列目も初期化しておくことで後の累積和で場合分けが不要になる
+  for(int i=0; i<=h; i++){
+    for(int j=0; j<=w; j++){
       sum[i][j]=0;
     }
   }
 
-  for(int i=1; i<=n; i++){
-    point[x[i]][y[i]]++;
-  }
-
-
-  for(int i=1; i<=1505; i++){
-    for(int j=1; j<=1505; j++){
-        sum[i][j]=sum[i][j-1]+point[i][j];
+  for(int i=1; i<=h; i++){
+    for(int j=1; j<=w; j++){
+        sum[i][j]=sum[i][j-1]+x[i][j];
     }
   }
 
-  for(int j=1; j<=1505; j++){
-    for(int i=1; i<=1505; i++){
+  for(int j=1; j<=w; j++){
+    for(int i=1; i<=h; i++){
         sum[i][j]=sum[i-1][j]+sum[i][j];
     }
   }
