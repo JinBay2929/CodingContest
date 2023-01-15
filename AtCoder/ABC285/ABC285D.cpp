@@ -18,6 +18,7 @@
 using namespace std;   
 
 
+//TLE地獄。何個かテストケースは通ったが…
 
 int n;
 string s[100009], t[100009], ans="No";
