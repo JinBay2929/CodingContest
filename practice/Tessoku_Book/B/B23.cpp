@@ -25,6 +25,7 @@ double dp[1<<16][19];
 
 int main(){
   cin>>n;
+  //都市番号は0番からとしている
   for(int i=0; i<n; i++)cin>>x[i]>>y[i];
 
   for (int i = 0; i < (1 << n); i++) {
