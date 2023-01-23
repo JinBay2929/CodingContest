@@ -18,7 +18,7 @@
 #include <iomanip>
 using namespace std;   
 
-
+//WAから抜けられず終了。。
 
 long long n;
 string s, t;
