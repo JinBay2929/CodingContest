@@ -55,6 +55,7 @@ int main(){
 
   sort(p.begin(), p.end());
 
+  //タテ幅をsortし、横幅ついて最長増加部分列を求める。
   vector<int> A;
 	for (int i = 0; i < p.size(); i++) {
 		A.push_back(-p[i].second);
