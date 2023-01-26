@@ -18,12 +18,12 @@
 #include <iomanip>
 using namespace std;   
 
-using ll=long long;
 
+long long a, b, ans;
 
-ll a, b, ans;
+int main(){
+  cin>>a>>b;
 
-ll gcd(ll a, ll b){
   while(a>=1 && b>=1){
     if(a>b){
       a%=b;
@@ -33,13 +33,7 @@ ll gcd(ll a, ll b){
     }
   }
 
-  return max(a, b);
-}
-
-int main(){
-  cin>>a>>b;
-
-  cout<<a/gcd(a, b) * b<<endl;
+  cout<<max(a, b)<<endl;
   
    
   return 0;

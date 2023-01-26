@@ -18,28 +18,25 @@
 #include <iomanip>
 using namespace std;   
 
-using ll=long long;
+//自力でエラトステネス実装できた。
 
+int n;
+bool deleted[1000009];
 
-ll a, b, ans;
+int main(){
+  cin>>n;
 
-ll gcd(ll a, ll b){
-  while(a>=1 && b>=1){
-    if(a>b){
-      a%=b;
-    }
-    else{
-      b%=a;
+  deleted[1]=true;
+  for(int i=2; i*i<=n; i++){
+    for(int j=i*2; j<=n; j+=i){
+      deleted[j]=true;
     }
   }
 
-  return max(a, b);
-}
-
-int main(){
-  cin>>a>>b;
-
-  cout<<a/gcd(a, b) * b<<endl;
+  for(int i=2; i<=n; i++){
+    if(deleted[i]==false)cout<<i<<endl;
+  }
+  
   
    
   return 0;

@@ -58,7 +58,12 @@
         "array": "cpp",
         "unordered_map": "cpp",
         "string_view": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "bitset": "cpp",
+        "functional": "cpp",
+        "set": "cpp",
+        "sstream": "cpp",
+        "xhash": "cpp"
     },
     "code-runner.runInTerminal": true,
     
