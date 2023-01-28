@@ -63,8 +63,13 @@
         "functional": "cpp",
         "set": "cpp",
         "sstream": "cpp",
-        "xhash": "cpp"
+        "xhash": "cpp",
+        "cassert": "cpp"
     },
     "code-runner.runInTerminal": true,
+
+    "code-runner.executorMap": {
+	    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++17 && $dir$fileNameWithoutExt",
+	},
     
 }
