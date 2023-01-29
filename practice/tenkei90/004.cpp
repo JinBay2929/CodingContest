@@ -25,7 +25,7 @@ int h, w, a[2009][2009];
 //横方向の和、縦方向の和
 int yoko[2009],tate[2009];
 
-
+//そのマスに出力するのはyoko[i]+tate[j]-a[i][j]
 
 int main(){
   cin>>h>>w;
