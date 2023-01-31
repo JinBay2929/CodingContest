@@ -20,6 +20,7 @@ using namespace std;
 
 using ll=long long;
 
+//WA。むりぽ
 
 ll t, n, k;
 string s;
