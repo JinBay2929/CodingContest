@@ -31,6 +31,7 @@ int main(){
   cin>>q;
   for(int i=1; i<=q; i++)cin>>l[i]>>r[i];
 
+  //クラスごとの累積和をとる
   for(int i=0; i<=n; i++){
     sum1[i]=0;
     sum2[i]=0;
