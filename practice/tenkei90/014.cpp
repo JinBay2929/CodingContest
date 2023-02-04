@@ -16,35 +16,28 @@
 #include <functional>
 #include <bitset>
 #include <iomanip>
-
 using namespace std;   
 
 using ll=long long;
-using ld=long double;
-#define PI (ld)3.14159265358979
 
-ll a, b, c, cc;
-
-
+int n;
+ll a[100009], b[100009], ans=0;
 
 int main(){
-  cin>>a>>b>>c;
+  cin>>n;
+  for(int i=1; i<=n; i++)cin>>a[i];
+  for(int i=1; i<=n; i++)cin>>b[i];
+ 
+  sort(a+1, a+n+1);
+  sort(b+1, b+n+1);
 
-  cc=c;
-  for(int i=1; i<=b-1; i++){
-    c*=cc;
+  for(int i=1; i<=n; i++){
+    ans+=abs(a[i]-b[i]);
   }
 
+  cout<<ans<<endl;
 
-  if(a<c){
-    cout<<"Yes"<<endl;
-  }
-  else{
-    cout<<"No"<<endl;
-  }
-
-
-  
+ 
   return 0;
 }
     

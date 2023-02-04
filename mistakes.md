@@ -1,3 +1,0 @@
-# ABC027B
-# ABC107B
-# sumitrust2019D
