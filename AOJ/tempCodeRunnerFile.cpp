@@ -1,8 +1,6 @@
-  int len=ans.size();
-  for(int i=0; i<len; i++){
-    if(i!=0)cout<<" ";
-    cout<<ans[i];
+if(dp[n][w]==0){
+    cout<<-1<<endl;
   }
-  cout<<endl;
-
-  
+  else{
+    cout<<dp[n][w]<<endl;
+  }
