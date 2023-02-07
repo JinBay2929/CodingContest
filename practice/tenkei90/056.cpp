@@ -59,18 +59,20 @@ int main(){
   else{
     string ans(n, '.');
     int sum=s; //逆にたどる際、その時点での和を記録しておく
-    for(int i=n; i>=1; i--){
-      if(dp[i-1][sum-a[i]]==true && sum-a[i]>=0){
-        sum-=a[i];
-        ans+="A";
+    for(int i=n-1; i>=0; i--){
+      if(dp[i][sum-a[i+1]]==true && sum-a[i+1]>=0){
+        ans[i]='A';
+        sum-=a[i+1];
+        
       }
       else{
-        sum-=b[i];
-        ans+="B";
+        ans[i]='B';
+        sum-=b[i+1];
+        
       }
     }
 
-    reverse(ans.begin(), ans.end());
+    
     cout<<ans<<endl;
   }
 
