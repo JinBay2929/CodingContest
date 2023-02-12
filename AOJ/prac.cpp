@@ -23,32 +23,47 @@ using ll=long long;
 using ld=long double;
 #define PI (ld)3.14159265358979
 
-int t, n, m;
+ll k;
+string n;
 
+ll eight_to_ten(string n){
+  int len=n.size();
+  ll ret=0;
+
+  for(int i=0; i<len; i++){
+    ret = ret*8+(n[i]-'0');
+  }
+  return ret;
+}
+
+string ten_to_nine(ll n){
+  if(n==0)return "0";
+
+  string ret="";
+  while(n>0){
+    int a = n%9;
+    string sa(1, a+'0');
+    ret=sa + ret;
+    n/=9;
+  }
+  return ret;
+}
 
 int main(){
-  cin>>t;
-  for(int i=1; i<=t; i++){
-    int c[2009], u[2009], v[2009];
-    bool visitedt[2009], visiteda[2009], colt, cola;
-    queue<int> qt, qa;
-
-    cin>>n>>m;
-    for(int j=1; j<=n; j++)cin>>c[i];
-    for(int j=1; j<=m; j++)cin>>u[j]>>v[j];
-
-    visitedt[1]=true;
-    visiteda[n]=true;
-    int cnt=0;
-
-    qt.push(1), qa.push(n);
-    while(colt!=cola){
-      
+  cin>>n>>k;
+  
+  for(int i=1; i<=k; i++){
+    n=ten_to_nine(eight_to_ten(n));
+    
+    int len=n.size();
+    for(int j=0; j<len; j++){
+      if(n[j]=='8')n[j]='5';
     }
+
+    
   }
 
-  
- 
+  cout<<n<<endl;
 
  
   return 0;
