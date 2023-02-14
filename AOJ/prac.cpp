@@ -23,42 +23,38 @@ using ll=long long;
 using ld=long double;
 #define PI (ld)3.14159265358979
 
-ll n, k, ans, MOD=1'000'000'007;
+ll n, x[100009], y[100009];
 
-//aのb乗をMODで余りとる
-int power(ll a, ll b){
-  ll ans=1;
-  while(b!=0){
-    if(b%2==1)ans = (ll)ans*a%MOD;
-
-    a = a*a%MOD;
-    b/=2;
-  }
-
-  return ans;
-}
 
 int main(){
-  cin>>n>>k;
+  cin>>n;
+
+  for(int i=1; i<=n; i++)cin>>x[i]>>y[i];
   
-  //n,kの場合分けが意外と難しいので整理。
-  if(k==1){
-    if(n==1)cout<<1<<endl;
-    else cout<<0<<endl;
-  }
-  else if(n==1){
-    cout<<k%MOD<<endl;
-  }
-  else if(n==2){
-    cout<<k%MOD*(k-1)%MOD<<endl;
+  sort(x+1, x+n+1);
+  sort(y+1, y+n+1);
+
+  //sortした後にちょうどど真ん中になる点ansx,ansyを出す。
+  //nが偶数の時は中点。
+  ld ansx, ansy;
+  ll ans=0;
+  if(n%2==1){
+    ansx=x[n/2+1];
+    ansy=y[n/2+1];
   }
   else{
-    cout<<k%MOD*(k-1)%MOD * power(k-2, n-2)%MOD<<endl;
+    ansx=(x[n/2]+x[n/2+1])/2;
+    ansy=(y[n/2]+y[n/2+1])/2;
   }
 
-  
-  
- 
+  for(int i=1; i<=n; i++){
+    ans+=abs(ansx-x[i]);
+    ans+=abs(ansy-y[i]);
+  }
+  // cout<<ansx<<endl;
+  // cout<<ansy<<endl;
+  cout<<ans<<endl;
+
   return 0;
 }
     
