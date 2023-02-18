@@ -35,12 +35,14 @@ int main(){
       //cout<<i<<endl;
     }
   }
-  if(n>1)cnt++;
+  if(n>1)cnt++;  //割って行って残りが素数のケースのみcnt++
 
+  //魔法の回数を考える。端数なしで丁度2のk乗のときとそれ以外で場合分け。
   int il=(int)log2(cnt);
   if(il==log2(cnt)){
     cout<<il<<endl;
-  }else{
+  }
+  else{
     cout<<il+1<<endl;
   }
   
