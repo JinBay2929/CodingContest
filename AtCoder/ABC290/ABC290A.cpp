@@ -23,30 +23,22 @@ using ll=long long;
 using ld=long double;
 #define PI (ld)3.14159265358979
 
-int t, n, d, k;
+int n, m;
+int a[109], b[109];
+ll ans=0;
 
 
 int main(){
-  cin>>t;
+  cin>>n>>m;
 
-  for(int i=1; i<=t; i++){
-    cin>>n>>d>>k;
-    int cycle_len;
+  for(int i=1; i<=n; i++)cin>>a[i];
+  for(int i=1; i<=m; i++)cin>>b[i];
 
-    d%=n;
-    if(n%d==0){
-      cycle_len=n/d;
-    }else{
-      cycle_len=n/d+1;
-    }
-
-    cout<<(k-1)/cycle_len+((k-1)%cycle_len)*d<<endl;
-
-
-    
-
+  for(auto i : b){
+    ans+=a[i];
   }
 
+  cout<<ans<<endl;
 
   return 0;
 }
