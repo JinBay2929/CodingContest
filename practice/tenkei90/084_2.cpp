@@ -36,13 +36,13 @@ int main(){
   ll cnt = 0;
   int len=s.size();
 
-	for (int i=0; i<len; i++) {
-		cnt++;
-		if (i ==len- 1 || s[i] != s[i + 1]) {
-			v.push_back(make_pair(s[i], cnt));
-			cnt = 0;
-		}
-	}
+    for (int i=0; i<len; i++) {
+        cnt++;
+        if (i ==len- 1 || s[i] != s[i + 1]) {
+            v.push_back(make_pair(s[i], cnt));
+            cnt = 0;
+        }
+    }
 
 	ll ret = 0;
   int vlen=v.size();
@@ -50,6 +50,8 @@ int main(){
 	for (int i = 0; i < vlen; i++) {
 		ret += v[i].second * (v[i].second + 1) / 2;
 	}
+
+    //余事象
 	cout << n * (n + 1) / 2LL - ret << endl;
 
 
