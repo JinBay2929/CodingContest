@@ -25,27 +25,36 @@ using ld=long double;
 
 
 
-int n, m;
-string s[49];
-ll MOD=998244353, ans=0;
-int qcnt[49];
+int n, q;
+int a, x;
+int c[109];
+
 
 int main(){
-  cin>>n>>m;
-  for(int i=1; i<=n; i++){
-    cin>>s[i];
-    for(int j=0; j<n; j++){
-      if(s[i][j]=='?')qcnt[i]++;
+  cin>>n>>q;
+
+  for(int i=1; i<=q; i++){
+    cin>>a>>x;
+
+    if(a==1){
+      c[x]++;
     }
+    else if(a==2){
+      c[x]+=2;
+    }
+    else if(a==3){
+      if(c[x]>=2){
+        cout<<"Yes"<<endl;
+      }
+      else{
+        cout<<"No"<<endl;
+      }
+    }
+
   }
 
 
-  for(int i=n; i>=1; i--){
-    for(int j=1; i<=n; i++){
-    
-    }
-  }
 
-
+  
 }
     

@@ -24,37 +24,32 @@ using ld=long double;
 #define PI (ld)3.14159265358979
 
 
-
 ll n, ans=0;
-vector<ll> v;
-
-
+ll num[200009]; //和がiになるa,bの組み合わせ数（a,b>=1）
 
 int main(){
   cin>>n;
 
-  for(ll i=1; i*i<=n; i++){
-    if(n%i==0){
-      v.push_back(i);
-      if(i!=(n/i))v.push_back(n/i);
+  for(int i=1; i<=n; i++){
+    ll tmp=0;
+    for(int j=1; j*j<=i; j++){
+      if(i%j==0){
+        tmp++;
+        if(j!=(i/j))tmp++;
+      }
     }
+    num[i]=tmp;
+
   }
 
-  sort(v.begin(), v.end());
-  ll len=v.size();
+  for(int i=1; i<=n; i++){
+    ans+=(num[i]*num[n-i]);
 
-  for(ll i=0; i<len; i++){
-    for(ll j=i; j<len; j++){
-      ll a=v[i], b=v[j], c;
-      if(n/a<b) continue;  //a*b>ならば飛ばすことと同義。
-      if(n%(a*b)!=0) continue; //約数cが残らないならばcontinue
-
-      c=n/a/b;
-      if(c>=b)ans++;
-    }
   }
-
   cout<<ans<<endl;
-	return 0;
+
+
+
+  
 }
     

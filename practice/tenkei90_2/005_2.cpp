@@ -25,27 +25,16 @@ using ld=long double;
 
 
 
-int n, m;
-string s[49];
-ll MOD=998244353, ans=0;
-int qcnt[49];
+int k, c[19], b;
+ll n;
 
 int main(){
-  cin>>n>>m;
-  for(int i=1; i<=n; i++){
-    cin>>s[i];
-    for(int j=0; j<n; j++){
-      if(s[i][j]=='?')qcnt[i]++;
-    }
+  cin>>n>>b>>k;
+
+  for(int i=1; i<=k; i++){
+    cin>>c[i];
   }
 
-
-  for(int i=n; i>=1; i--){
-    for(int j=1; i<=n; i++){
-    
-    }
-  }
-
-
+  
 }
     

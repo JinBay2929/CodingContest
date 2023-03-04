@@ -25,27 +25,17 @@ using ld=long double;
 
 
 
-int n, m;
-string s[49];
-ll MOD=998244353, ans=0;
-int qcnt[49];
+string s;
 
 int main(){
-  cin>>n>>m;
-  for(int i=1; i<=n; i++){
-    cin>>s[i];
-    for(int j=0; j<n; j++){
-      if(s[i][j]=='?')qcnt[i]++;
-    }
+  cin>>s;
+
+  for(int i=0; i<s.size(); i++){
+    s[i]=s[i]-32;
   }
 
+  cout<<s<<endl;
 
-  for(int i=n; i>=1; i--){
-    for(int j=1; i<=n; i++){
-    
-    }
-  }
-
-
+  
 }
     
