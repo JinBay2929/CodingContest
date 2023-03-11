@@ -23,7 +23,7 @@ using ll=long long;
 using ld=long double;
 #define PI (ld)3.14159265358979
 
-
+//TLE取れず。
 
 //aのb乗をmで割った余り
 ll modpow(ll a, ll b, ll m) {

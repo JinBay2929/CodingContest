@@ -104,16 +104,16 @@ int main(){
   A.sz=b;
 
   for (int i = 0; i <b; i++) {
-		for (int j = 0; j <b; j++){
+	for (int j = 0; j <b; j++){
       A.x[i][j] = 0;
     }
-	}
+  }
   for (int i = 0; i < b; i++) {
-		for (int j = 1; j <= K; j++) {
-			int nex = (i * 10 + c[j]) % b;
-			A.x[i][nex] += 1;
-		}
-	}
+    for (int j = 1; j <= K; j++) {
+        int nex = (i * 10 + c[j]) % b;
+        A.x[i][nex] += 1;
+    }
+  }
 
   Matrix Z=powers(A, n);
   ll ans=Z.x[0][0];
