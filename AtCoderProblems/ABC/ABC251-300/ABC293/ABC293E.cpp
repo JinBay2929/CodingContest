@@ -24,8 +24,8 @@ using ld=long double;
 #define PI (ld)3.14159265358979
 
 
-
-
+//平方分割。
+//事あるごとに%mしないとオーバーフローする。
 
 ll a, x, m;
 ll ans;
@@ -36,6 +36,7 @@ int main(){
 
   s=sqrt(x);
 
+  //B=1+A+A**2 + ... + A**(sqrt(x)-1)
   ll tmp=1;
   for(ll i=0; i<s; i++){
     b+=tmp;
@@ -45,9 +46,11 @@ int main(){
     tmp%=m;
   }
 
+  //dはa**s　%m。
   d=tmp;
   
-
+  //d=a**s
+  //C=B+B∗D+B∗D**2 +...+B∗D**s 
   tmp=1;
   for(ll i=0; i<s; i++){
     c+=tmp;
@@ -59,6 +62,7 @@ int main(){
   c*=b;
   c%=m;
 
+  //もともとの等比数列の形に一致するように掛け算して調整
   for(ll i=1; i<=(x-s*s); i++){
     c*=a;
     c+=1;
