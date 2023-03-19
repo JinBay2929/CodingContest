@@ -23,43 +23,52 @@ using ll=long long;
 using ld=long double;
 #define PI (ld)3.14159265358979
 
-ll n, m, k;
-ll a[50009], b[50009], c[50009], d[50009]; 
-ld ans;
 
-vector<ld> ab, cd;
 
+ll n, m;
+ll a[100009], b[100009];
+ll ansa[100009], ansb[100009];
+vector<pair<ll, ll>> c;
 
 int main(){
-  cin>>n>>m>>k;
+  cin>>n>>m;
   for(int i=1; i<=n; i++){
-    cin>>a[i]>>b[i];
+      cin>>a[i];
   }
   for(int i=1; i<=m; i++){
-    cin>>c[i]>>d[i];
+      cin>>b[i];
   }
 
   for(int i=1; i<=n; i++){
-    ld tmp;
-    tmp=a[i]*100/(a[i]+b[i]);
-    ab.push_back(tmp);
+    c.push_back(make_pair(a[i], i));
   }
+  for(int i=1; i<=m; i++){
+    c.push_back(make_pair(b[i], i));
+  }
+
+  sort(c.begin(), c.end());
+
+  for(ll i=0; i<n+m; i++){
+    if(a[c[i].second]==c[i].first){
+      ansa[c[i].second]=i+1;
+    }
+    else{
+      ansb[c[i].second]=i+1;
+    }
+  }
+
+  for(int i=1; i<=n; i++){
+    if(i>1)cout<<" ";
+    cout<<ansa[i];
+  }
+  cout<<endl;
 
   for(int i=1; i<=m; i++){
-    ld tmp;
-    tmp=c[i]*100/(c[i]+d[i]);
-    cd.push_back(tmp);
+    if(i>1)cout<<" ";
+    cout<<ansb[i];
   }
+  cout<<endl;
 
-  sort(ab.begin(), ab.end());
-  sort(cd.begin(), cd.end());
-
-
-  ll abl=0, abr=n-1;
-  ll cdl=0, cdr=m-1;
-
-
-  
   
   
 
