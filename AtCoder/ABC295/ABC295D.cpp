@@ -23,6 +23,9 @@ using ll=long long;
 using ld=long double;
 #define PI (ld)3.14159265358979
 
+//エラー取れず
+
+
 string s;
 int len;
 int l, r;
@@ -69,14 +72,14 @@ int main(){
       else{
         Set.insert(s[tl]);
         tl++;
-        // while(!Set.empty() && tl<tr){
-        //   if(Set.count(s[tl])){
-        //     Set.erase(s[tl]);
-        //   }
-        //   else{
-        //     Set.insert(s[tl]);
-        //   }
-        // }
+        while(!Set.empty() && tl<tr){
+          if(Set.count(s[tl])){
+            Set.erase(s[tl]);
+          }
+          else{
+            Set.insert(s[tl]);
+          }
+        }
 
       //   if(Set.empty()){
       //     ans++;

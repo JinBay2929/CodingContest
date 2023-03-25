@@ -29,6 +29,7 @@ struct MyStruct{
   ll num;
 
 };
+//structをソートできるようにするため宣言
 bool compareMyStruct(const MyStruct& a, const MyStruct& b) {
   return a.ruiseki < b.ruiseki;
 }
